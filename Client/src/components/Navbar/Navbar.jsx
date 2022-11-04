@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
   return (
     <nav className="nav-container">
       <Link to="/">
         <img
-          src="https://media.discordapp.net/attachments/573166469525798922/1038163144746467408/unknown.png?width=1562&height=983"
+          className="nav-logoImg"
+          src="https://media.discordapp.net/attachments/573166469525798922/1038163237985849457/unknown.png"
           alt="League of legends logo"
         />
       </Link>
-      <ul>
+      <div className="nav-ul">
         <Link to="/champions">All Champions</Link>
-      </ul>
+      </div>
     </nav>
   );
 }

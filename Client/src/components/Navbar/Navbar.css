@@ -1,0 +1,30 @@
+.nav-container {
+  display: flex;
+  position: fixed;
+  height: 60px;
+  width: 100vw;
+  background-color: rgb(29, 29, 29);
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.nav-container > a {
+  display: flex;
+  align-items: center;
+}
+.nav-logoImg {
+  height: 40px;
+}
+.nav-ul {
+  display: flex;
+  align-items: center;
+}
+.nav-ul > * {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-ul > *:hover {
+  color: #ff2f2f;
+}
