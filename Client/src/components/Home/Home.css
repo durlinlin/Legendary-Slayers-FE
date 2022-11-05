@@ -1,0 +1,104 @@
+.homeContainer{
+  position: absolute;
+  display: flex;
+  top: 60px;
+  width: 100vw;
+  height: fit-content;
+  flex-direction: column;
+}
+
+.homeSectionA{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+}
+.homeLogo{
+  position: absolute;
+  z-index: 2;
+  height: 30%;
+  width: 40%;
+  background-image: url('./leaguelogo.png');
+  background-size: cover;
+  background-position: center;
+}
+#home-bg-A{
+  background-size: cover;
+  margin: -2%;
+  filter:blur(15px);
+  }
+.homeBackVid{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:fit-content;
+  /* border: 5px solid rgb(255, 0, 0); */
+  overflow: hidden;
+  height: calc(60vh + 60px);
+}
+#frontVid{
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.homeSectionABottom{
+width: 100vw;
+height: 50vh;
+overflow: hidden;
+/* border: 1px solid blue; */
+background-color: rgb(242, 242, 242);
+}
+.homeFrontVidWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  position: absolute;
+  /* border: 1px solid red; */
+  height: 60vh;
+  width: 85vw;
+  /* top: 10%; */
+  z-index: 2;
+}
+.homeFrontVidFrame{
+  border: 2px solid rgb(179, 177, 177);
+  height: 105%;
+  width: 97.5%;
+  position: absolute;
+  z-index: 2;
+}
+.homeFrontVid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  /* top: 10%; */
+  z-index: 2;
+}
+
+@media screen and (max-width: 800px) {
+  .homeFrontVidWrap{
+    display: none;
+  }
+  #home-bg-A{
+    filter:blur(0);
+    }
+  .homeBackVid{
+    height: 100%;
+    width: fit-content;
+  }
+}
