@@ -6,6 +6,7 @@ function Home() {
     <div className="homeContainer">
       <div className="homeSectionA">
         <div className="homeBackVid">
+        <div className="homeBackLogo"></div>
           <video
             id="home-bg-A"
             autoPlay
@@ -26,10 +27,10 @@ function Home() {
                     type="video/mp4"
                     ></video>
           </div>
-          <div className="homeFrontVidFrame"></div>
+          <div className="homeFrontVidFrame">
+          <div className="homeFrontLogo"></div>
+          </div>
         </span>
-        <div className="homeLogo"></div>
-
         <div className="homeSectionABottom"></div>
       </div>
       
