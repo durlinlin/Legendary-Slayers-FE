@@ -1,18 +1,25 @@
 import React from "react";
 import charsData from "../../champs.json";
+import "./Characters.css";
 
 function Characters() {
   return (
-    <>
-      {charsData.map((char) => {
-        return (
-          <div>
-            <h1>{char.name}</h1>
-            <p>{char.lore}</p>
-          </div>
-        );
-      })}
-    </>
+    <div className="character-page-wrapper">
+      <div className="title-section">
+        <h4>CHOOSE YOUR</h4>
+        <h1>CHAMPION</h1>
+      </div>
+      <div className="characters-container">
+        {charsData.map((char) => {
+          return (
+            <div className="character-card">
+              <img src={`${char.image_loading}`} alt="" />
+              <h1>{char.name}</h1>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
