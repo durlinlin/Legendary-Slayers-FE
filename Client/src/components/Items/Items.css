@@ -10,6 +10,7 @@
 }
 .items-container {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 1rem;
@@ -20,9 +21,20 @@
   cursor: pointer;
 }
 .item-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .item-card > img {
   width: 48px;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(22, 22, 22, 0.9);
+  height: 100px;
+  width: 200px;
+  color: white;
+  z-index: 10;
 }
