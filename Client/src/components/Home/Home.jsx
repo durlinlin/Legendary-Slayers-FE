@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Footer from "../Footer/Footer";
 
 function Home() {
   return (
@@ -33,8 +34,7 @@ function Home() {
         </span>
         <div className="homeSectionABottom"></div>
       </div>
-      
-      {/* Home  */}
+      <Footer/>
     </div>
   );
 }
