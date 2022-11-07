@@ -1,0 +1,18 @@
+footer{
+  display: flex;
+  height: 20vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 2;
+}
+.github-links{
+  display: flex;
+  border: 1px solid orange;
+}
+.github-icons{
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background-image: url('./github-logo.png');
+  background-size: cover;
+}
