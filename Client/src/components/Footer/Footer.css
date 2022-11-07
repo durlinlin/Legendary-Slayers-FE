@@ -10,11 +10,13 @@ footer{
 }
 .github-links{
   display: flex;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   justify-content: space-evenly;
   align-items: center;
-  height: 15%;
-  width: 15%;
+  height: 70px;
+  width: 200px;
+  margin-top: 20px;
+  border: 1px solid orange;
 }
 .github-icons{
   display: flex;
@@ -25,8 +27,28 @@ footer{
 }
 .footer-logo{
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url('https://media.discordapp.net/attachments/573166469525798922/1038163144746467408/unknown.png?width=1562&height=983');
   background-size: cover;
   height: 100px;
   width: 200px;
+  /* border: 1px solid red; */
+  border-radius: 15px;
+}
+.maturity-rating{
+  display: flex;
+  background-image: url('./maturity-rating.png');
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  height: 120px;
+  width: 280px;
+}
+@media screen and (max-width: 500px) {
+  .maturity-rating{
+    margin-bottom: 20px;
+  }
 }
