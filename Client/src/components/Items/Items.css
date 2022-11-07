@@ -1,2 +1,28 @@
+.wrapper {
+  margin-top: 60px;
+  padding: 60px 0;
+  height: 100%;
+  width: 100vw;
+  background-color: beige;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
 .items-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+.item-card {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item-card:hover {
+  transform: scale(1.03);
+}
+
+.item-card > img {
+  width: 48px;
 }
