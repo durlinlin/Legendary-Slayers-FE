@@ -2,9 +2,11 @@ import React from "react";
 import charsData from "../../champs.json";
 import { Link } from "react-router-dom";
 import "./Characters.css";
+import Footer from "../Footer/Footer";
 
 function Characters() {
   return (
+    <div>
     <div className="character-page-wrapper">
       <div className="title-section">
         <h4>CHOOSE YOUR</h4>
@@ -25,7 +27,9 @@ function Characters() {
             </Link>
           );
         })}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }
