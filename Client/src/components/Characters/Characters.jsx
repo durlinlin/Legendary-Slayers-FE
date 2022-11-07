@@ -1,5 +1,6 @@
 import React from "react";
 import charsData from "../../champs.json";
+import { Link } from "react-router-dom";
 import "./Characters.css";
 
 function Characters() {
@@ -16,10 +17,12 @@ function Characters() {
       <div className="characters-container">
         {charsData.map((char) => {
           return (
-            <div className="character-card">
-              <img src={`${char.image_loading}`} alt="" />
-              <h1>{char.name}</h1>
-            </div>
+            <Link to={`/champions/${char.name}`}>
+              <div className="character-card">
+                <img src={`${char.image_loading}`} alt="" />
+                <h1>{char.name}</h1>
+              </div>
+            </Link>
           );
         })}
       </div>
