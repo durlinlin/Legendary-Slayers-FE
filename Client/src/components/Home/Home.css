@@ -33,6 +33,7 @@
   background-image: url('./leaguelogo.png');
   background-size: cover;
   background-position: center;
+  display: none;
 }
 #home-bg-A{
   background-size: cover;
@@ -109,5 +110,8 @@ background-color: white;
   .homeBackVid{
     height: 100%;
     width: fit-content;
+  }
+  .homeBackLogo {
+    display: flex;
   }
 }
