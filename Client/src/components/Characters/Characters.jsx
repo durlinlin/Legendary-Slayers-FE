@@ -42,7 +42,7 @@ function Characters() {
               onChange={handleChampSearch}>
               </input>
           </form>
-          <form className="champClass">
+          <form className="champClassFilter">
             <button id="all" data-value="" onClick={handleClassSearch}>All</button>
             <button id="assassin" data-value="assassin" onClick={handleClassSearch}>Assassins</button>
             <button id="fighter" data-value="fighter" onClick={handleClassSearch}>Fighters</button>

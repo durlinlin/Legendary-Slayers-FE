@@ -80,20 +80,20 @@
   width: 100%;
   height: 50px;
 }
-.champClass{
+.champClassFilter{
   display: flex;
   width: 70%;
   align-items: center;
   justify-content: center;
   gap: 25px;
 }
-.champClass > * {
+.champClassFilter > * {
   cursor: pointer;
-border: none;
-background-color: white;
-width: fit-content;
-border: 2px solid white;
-transition: border .2s;
+  border: none;
+  background-color: white;
+  width: fit-content;
+  border: 2px solid white;
+  transition: border .2s;
 }
 
 .classActive {
