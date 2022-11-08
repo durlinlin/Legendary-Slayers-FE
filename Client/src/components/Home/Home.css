@@ -109,7 +109,7 @@ background-color: rgb(242, 242, 242);
 
 @media screen and (max-width: 500px) {
   .homeFrontVidWrap{
-    display: none;
+    z-index: -1;
   }
   #home-bg-A{
     filter:blur(0);

@@ -1,2 +1,49 @@
+.wrapper {
+  margin-top: 60px;
+  padding: 60px 0;
+  height: 100%;
+  width: 100vw;
+  background-color: beige;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
 .items-container {
+  /* background-color: red; */
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+.item-card {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item-card:hover {
+  transform: scale(1.05);
+}
+
+.item-card > img {
+  width: 48px;
+}
+
+.pop-up {
+  display: block;
+  position: fixed;
+  background-color: rgba(22, 22, 22, 0.9);
+  height: fit-content;
+  width: 200px;
+  color: white;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+
+.hide {
+  display: none;
 }
