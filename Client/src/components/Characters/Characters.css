@@ -111,6 +111,3 @@ transition: border .2s;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-*{
-  /* border: 1px solid red; */
-}
