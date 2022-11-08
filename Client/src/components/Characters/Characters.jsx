@@ -1,11 +1,12 @@
 import React from "react";
-import charsData from "../../champs.json";
+// import charsData from "../../champs.json";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Characters.css";
 import Footer from "../Footer/Footer";
 
 function Characters() {
+  const [charsData, setCharsData] = useState([])
   const [searchName, setSearchName] = useState("")
   const [champClass, setChampClass] = useState("")
   const [classID, setClassID] = useState("")
@@ -24,7 +25,16 @@ function Characters() {
     console.log(e.target.value)
     setChampClass(e.target.value)
   }
-
+  let fetchData = () => {
+    fetch("https://legendary-slayers-be-production.up.railway.app/champions/all")
+      .then((res) => res.json())
+      .then((data) => {
+        setCharsData(data)
+      })
+  }
+  useEffect(() => {
+    fetchData()
+  },[])
 
   return (
     <div>
