@@ -19,6 +19,9 @@
 .nav-ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  border: 1px solid red;
 }
 .nav-ul > * {
   text-decoration: none;
@@ -27,4 +30,10 @@
 }
 .nav-ul > *:hover {
   color: #ff2f2f;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-ul {
+    width: 70%;
+  }
 }

@@ -7,7 +7,7 @@ function Home() {
     <div className="homeContainer">
       <div className="homeSectionA">
         <div className="homeBackVid">
-        <div className="homeBackLogo"></div>
+          <div className="homeBackLogo"></div>
           <video
             id="home-bg-A"
             autoPlay
@@ -17,9 +17,9 @@ function Home() {
             type="video/mp4"
           ></video>
         </div>
-        <span className="homeFrontVidWrap">
+        <div className="homeFrontVidWrap">
           <div className="homeFrontVid">
-              <video
+            <video
                     id="frontVid"
                     autoPlay
                     loop
@@ -31,7 +31,7 @@ function Home() {
           <div className="homeFrontVidFrame">
           <div className="homeFrontLogo"></div>
           </div>
-        </span>
+        </div>
         <div className="homeSectionABottom"></div>
       </div>
       <Footer/>

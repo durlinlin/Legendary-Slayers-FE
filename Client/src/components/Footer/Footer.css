@@ -37,8 +37,8 @@
   text-decoration: none;
   color: white;
 }
-.github-icons :hover{
-  color: gold;
+.github-icons:hover{
+  color: rgb(9, 119, 139);
 }
 .footer-icons{
   display: flex;
