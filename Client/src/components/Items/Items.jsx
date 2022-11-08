@@ -15,7 +15,14 @@ function Items() {
     e.currentTarget.nextElementSibling.classList.add("hide");
   };
   return (
-    <div className="wrapper">
+    <div className="items-page-wrapper">
+      <div className="items-title-section">
+        <h4>CHOOSE YOUR</h4>
+        <h1>ITEMS</h1>
+        <p>
+        All in-game items for League of Legends, including mythics, legendary, starting items, and consumables. Up-to-date stats, passives, actives, and gold costs
+        </p>
+      </div>
       <div className="items-container">
         {itemsJson.map((item, index) => {
           return (
