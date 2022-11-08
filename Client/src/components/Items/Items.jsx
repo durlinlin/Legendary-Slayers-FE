@@ -1,9 +1,22 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
-import itemsJson from "../../Items.json";
+// import itemsJson from "../../Items.json";
 import "./Items.css";
+
 function Items() {
+  const [itemsData, setItemsData] = useState([])
+  let fetchItemsData = () => {
+    fetch("https://legendary-slayers-be-production.up.railway.app/items/all")
+      .then((res) => res.json())
+      .then((data) => {
+        setItemsData(data)
+      })
+  }
+  useEffect(() => {
+    fetchItemsData()
+  },[])
+
   function showInfo(e) {
     e.currentTarget.nextElementSibling.style.top = `${e.clientY - 100}px`;
     e.currentTarget.nextElementSibling.style.left = `${e.clientX + 30}px`;
@@ -24,7 +37,7 @@ function Items() {
         </p>
       </div>
       <div className="items-container">
-        {itemsJson.map((item, index) => {
+        {itemsData.map((item, index) => {
           return (
             <>
               <div
