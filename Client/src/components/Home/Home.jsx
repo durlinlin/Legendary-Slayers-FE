@@ -13,6 +13,7 @@ function Home() {
             autoPlay
             loop
             muted
+            width="1200" height="600"
             src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
             type="video/mp4"
           ></video>
