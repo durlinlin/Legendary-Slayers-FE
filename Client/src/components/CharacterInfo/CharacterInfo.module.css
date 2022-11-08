@@ -18,6 +18,7 @@ body {
 
 .content {
 	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -25,7 +26,6 @@ body {
 	font-weight: 900;
 	height: 40%;
 	justify-content: center;
-	letter-spacing: 0.03em;
 	margin-top: 470px;
 	padding-left: 100px;
 	padding-right: 100px;
@@ -43,6 +43,7 @@ body {
 
 .name {
 	font-size: 75px;
+	letter-spacing: 0.1em;
 }
 .splashImg {
 	display: flex;
@@ -54,6 +55,7 @@ body {
 
 .title {
 	font-size: 25px;
+	letter-spacing: 0.1em;
 }
 
 #champSplash {
