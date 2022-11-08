@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
-import { useState } from "react";
 import "./SignIn.css";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   const passwordRef = useRef(null);
@@ -14,7 +14,6 @@ function SignIn() {
     <div className="signIn-container">
       <form className="signIn-form" onSubmit={handleFormSubmit}>
         <h1>Sign In</h1>
-
         <input
           type="text"
           ref={usernameRef}
@@ -22,7 +21,6 @@ function SignIn() {
           name="username"
           id="username"
         />
-
         <input
           ref={passwordRef}
           type="password"
@@ -31,8 +29,8 @@ function SignIn() {
           id="password"
           autoComplete="on"
         />
-
         <button>Submit</button>
+        <Link to="/signUp">Create account</Link>
       </form>
     </div>
   );
