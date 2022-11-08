@@ -29,8 +29,8 @@ function SignIn() {
           id="password"
           autoComplete="on"
         />
-        <button>Submit</button>
-        <Link to="/signUp">Create account</Link>
+        <button>Log In</button>
+        <button><Link to="/signUp">Create account</Link></button>
       </form>
     </div>
   );

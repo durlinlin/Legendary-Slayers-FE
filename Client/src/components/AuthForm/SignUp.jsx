@@ -13,6 +13,7 @@ function SignUp() {
   return (
     <div className="signIn-container">
       <form className="signIn-form" onSubmit={handleFormSubmit}>
+        <Link to="/signIn">Go Back</Link>
         <h1>Sign Up</h1>
         <input
           type="text"
@@ -29,8 +30,15 @@ function SignUp() {
           id="password"
           autoComplete="on"
         />
+        <input
+          ref={passwordRef}
+          type="password"
+          placeholder="Confirm Password"
+          name="password"
+          id="password"
+          autoComplete="on"
+        />
         <button>Submit</button>
-        <Link to="/signIn">Sign In</Link>
       </form>
     </div>
   );
