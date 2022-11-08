@@ -44,7 +44,6 @@
   flex-direction: column;
   width: 100%;
   height:fit-content;
-  /* border: 5px solid rgb(255, 0, 0); */
   overflow: hidden;
   height: calc(60vh + 60px);
   justify-content: center;
@@ -66,20 +65,16 @@ display: block;
 width: 100vw;
 height: 50vh;
 overflow: hidden;
-/* border: 1px solid blue; */
-background-color: rgb(242, 242, 242);
+background-color: white;
 }
 .homeFrontVidWrap{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
   position: absolute;
   top: 5vh;
-  /* border: 1px solid red; */
   height: 60vh;
   width: 85vw;
-  /* top: 10%; */
   z-index: 2;
 }
 .homeFrontVidFrame{
@@ -100,10 +95,8 @@ background-color: rgb(242, 242, 242);
   align-items: center;
   overflow: hidden;
   position: absolute;
-  /* border: 1px solid red; */
   height: 100%;
   width: 100%;
-  /* top: 10%; */
   z-index: 2;
 }
 
