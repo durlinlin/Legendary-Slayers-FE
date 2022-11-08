@@ -36,3 +36,8 @@
 	/* transform: scale(1.03); */
 	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+
+.champname {
+	margin-top: 120px;
+	margin-inline: auto;
+}
