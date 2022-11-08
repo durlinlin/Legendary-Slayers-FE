@@ -1,0 +1,54 @@
+.signIn-container {
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://lolstatic-a.akamaihd.net/rso-login-page/3.2.32/assets/lol_desktop_background_2x.jpg");
+  background-size: cover;
+}
+
+.signIn-form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: fit-content;
+  transform: translateY(-20px);
+  padding: 40px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+}
+.signIn-form * {
+  border-radius: 5px;
+}
+
+.signIn-form > input {
+  border: none;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  background-color: rgb(241, 241, 241);
+  transition: all 0.3s ease-in-out;
+  outline: 0;
+}
+
+.signIn-form > input:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+.signIn-form > input:focus {
+  background-color: rgb(232, 232, 232);
+}
+
+.signIn-form > button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(237, 167, 62);
+}
+
+.signIn-form > button:hover {
+  cursor: pointer;
+  background-color: rgb(224, 146, 29);
+}
