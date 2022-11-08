@@ -14,6 +14,8 @@ function Navbar() {
       </Link>
       <div className="nav-ul">
         <Link to="/champions">All Champions</Link>
+        <Link to="/items">All Items</Link>
+        <Link to="/signin">Sign In</Link>
       </div>
     </nav>
   );
