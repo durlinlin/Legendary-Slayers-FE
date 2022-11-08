@@ -1,9 +1,9 @@
 import React from "react";
+import "./SignUp.css";
 import { useRef } from "react";
-import "./SignIn.css";
 import { Link } from "react-router-dom";
 
-function SignIn() {
+function SignUp() {
   const passwordRef = useRef(null);
   const usernameRef = useRef(null);
 
@@ -13,7 +13,7 @@ function SignIn() {
   return (
     <div className="signIn-container">
       <form className="signIn-form" onSubmit={handleFormSubmit}>
-        <h1>Sign In</h1>
+        <h1>Sign Up</h1>
         <input
           type="text"
           ref={usernameRef}
@@ -30,10 +30,10 @@ function SignIn() {
           autoComplete="on"
         />
         <button>Submit</button>
-        <Link to="/signUp">Create account</Link>
+        <Link to="/signIn">Sign In</Link>
       </form>
     </div>
   );
 }
 
-export default SignIn;
+export default SignUp;
