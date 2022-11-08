@@ -51,6 +51,7 @@ function Characters() {
             <button id="support" data-value="support" onClick={handleClassSearch}>Supports</button>
             <button id="tank" data-value="tank" onClick={handleClassSearch}>Tanks</button>
           </form>
+
         </div>  
       <div className="characters-container">
           {charsData.map((char) =>
