@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<SignIn />} />
+        <Route path="/signIn" element={<SignIn />} />
         <Route path="/champions" element={<Characters />} />
         <Route path="/champions/:champion_name" element={<CharacterInfo />} />
         <Route path="/items" element={<Items />} />
