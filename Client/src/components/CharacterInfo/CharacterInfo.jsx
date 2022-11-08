@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import style from "./CharacterInfo.module.css";
+import Slideshow from "../Slideshow/Slideshow";
 
 function CharacterInfo() {
 	const [champion, setChampion] = useState({});
