@@ -19,7 +19,11 @@ function Characters() {
     setClassID(e.target.id)
     setChampClass(e.target.dataset.value.toString())
   }; 
-
+  const handleSelectChange = (e) => {
+    e.preventDefault()
+    console.log(e.target.value)
+    setChampClass(e.target.value)
+  }
 
 
   return (
@@ -51,7 +55,22 @@ function Characters() {
             <button id="support" data-value="support" onClick={handleClassSearch}>Supports</button>
             <button id="tank" data-value="tank" onClick={handleClassSearch}>Tanks</button>
           </form>
-
+          <form className="champClassSelect">
+            <select className="inputStyle"
+                name="class"
+                id="classSelector"
+                size="1"
+                onChange={handleSelectChange}>
+                <option value="none" selected disabled hidden>Select by class</option>
+                <option value="">All Classes</option>
+                <option value="assassin">Assassins</option>
+                <option value="fighter">Fighters</option>
+                <option value="mage">Mages</option>
+                <option value="marksman">Marksmen</option>
+                <option value="support">Supports</option>
+                <option value="tank">Tanks</option>
+              </select>
+          </form>
         </div>  
       <div className="characters-container">
           {charsData.map((char) =>
