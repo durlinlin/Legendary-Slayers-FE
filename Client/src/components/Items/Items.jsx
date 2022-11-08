@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 // import itemsJson from "../../Items.json";
+import Footer from "../Footer/Footer";
 import "./Items.css";
 
 function Items() {
@@ -28,6 +29,7 @@ function Items() {
     e.currentTarget.nextElementSibling.classList.add("hide");
   };
   return (
+  <div>
     <div className="items-page-wrapper">
       <div className="items-title-section">
         <h4>CHOOSE YOUR</h4>
@@ -60,7 +62,9 @@ function Items() {
           );
         })}
       </div>
-    </div>
+      </div>
+      <Footer />
+  </div>
   );
 }
 
