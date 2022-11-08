@@ -11,7 +11,7 @@ body {
 	height: 100%;
 	margin: auto;
 	overflow: visible;
-	position: relative;
+	position: absolute;
 	width: 100%;
 	z-index: 0;
 }
