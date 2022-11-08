@@ -1,16 +1,27 @@
 import React from "react";
+import "./SignIn.css";
 
 function SignIn() {
   return (
     <div className="signIn-container">
-      <form>
+      <form className="signIn-form">
         <h1>Sign In</h1>
 
-        <label htmlFor="username">Username: </label>
-        <input type="text" name="username" id="username" />
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          id="username"
+        />
 
-        <label htmlFor="password">Password: </label>
-        <input type="password" name="password" id="password" />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          id="password"
+        />
+
+        <button>Submit</button>
       </form>
     </div>
   );
