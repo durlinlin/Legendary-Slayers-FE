@@ -10,7 +10,7 @@ export const signUp = async (credentials) => {
     localStorage.setItem("token", resp.data.token);
     const user = jwtDecode(resp.data.token);
     return user;
-  } catch (error) {
+  } catch (error) { 
     throw error;
   }
 };
