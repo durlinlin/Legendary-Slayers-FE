@@ -1,10 +1,11 @@
 import React from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import "./SignIn.css";
 
 function SignIn() {
-  const [password, setPassword] = useState();
-  const [username, setUsername] = useState();
+  const passwordRef = useRef(null);
+  const usernameRef = useRef(null);
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -16,21 +17,19 @@ function SignIn() {
 
         <input
           type="text"
-          value={username}
+          ref={usernameRef}
           placeholder="Username"
           name="username"
           id="username"
-          onChange={(e) => setUsername(e.target.value)}
         />
 
         <input
-          value={password}
+          ref={passwordRef}
           type="password"
           placeholder="Password"
           name="password"
           id="password"
           autoComplete="on"
-          onChange={(e) => setPassword(e.target.value)}
         />
 
         <button>Submit</button>
