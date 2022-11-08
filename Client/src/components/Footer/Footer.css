@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
-  height: 48vh;
+  height: 52vh;
   width: 100vw;
   background-color: black;
   color: white;
@@ -75,4 +75,8 @@
   .maturity-rating{
     margin-bottom: 20px;
   }
+}
+
+h3 {
+  margin-top: 20px;
 }
