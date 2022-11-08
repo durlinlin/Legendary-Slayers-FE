@@ -6,12 +6,21 @@ import "./Characters.css";
 import Footer from "../Footer/Footer";
 
 function Characters() {
-  const [name, setName] = useState("")
+  const [searchName, setSearchName] = useState("")
+  const [champClass, setChampClass] = useState("")
+  const [classID, setClassID] = useState("")
 
-  const handleSearch = (e) => {
+  const handleChampSearch = (e) => {
     e.preventDefault();
-    setName(e.target.value)
+    setSearchName(e.target.value)
   }; 
+  const handleClassSearch = (e) => {
+    e.preventDefault();
+    setClassID(e.target.id)
+    setChampClass(e.target.dataset.value.toString())
+  }; 
+
+
 
   return (
     <div>
@@ -24,23 +33,34 @@ function Characters() {
           playstyle. Master one, or master them all.
         </p>
       </div>
-        <div className="search-bar">
-          <form>
+        <div className="filter-container">
+          <form className="search-bar">
             <input
               type="search"
               className="select-search-input"
               placeholder="Search Champions"
-              onChange={handleSearch}>
+              onChange={handleChampSearch}>
               </input>
-        </form>
+          </form>
+          <form className="champClass">
+            <button id="all" data-value="" onClick={handleClassSearch}>All</button>
+            <button id="assassin" data-value="assassin" onClick={handleClassSearch}>Assassins</button>
+            <button id="fighter" data-value="fighter" onClick={handleClassSearch}>Fighters</button>
+            <button id="mage" data-value="mage" onClick={handleClassSearch}>Mages</button>
+            <button id="marksman" data-value="marksman" onClick={handleClassSearch}>Marksmen</button>
+            <button id="support" data-value="support" onClick={handleClassSearch}>Supports</button>
+            <button id="tank" data-value="tank" onClick={handleClassSearch}>Tanks</button>
+          </form>
         </div>  
       <div className="characters-container">
-        {charsData.map((char) => char.name.toLowerCase().includes(name.toLocaleLowerCase()) &&
+          {charsData.map((char) =>
+            char.name.toLowerCase().includes(searchName.toLowerCase()) &&
+            char.tags.join().toLowerCase().includes(champClass) &&
            (
             <Link to={`/champions/${char.name}`}>
               <div className="character-card">
-                <img src={`${char.image_loading}`} alt="" />
-                <h1>{char.name}</h1>
+                <img src={`${char.image_loading}`} alt="" ></img>
+                <div className="champ-name"><h4>{char.name}</h4></div>
               </div>
             </Link>
           )

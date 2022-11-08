@@ -36,26 +36,68 @@
 .character-card {
   position: relative;
   cursor: pointer;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* box-shadow: inset 0 0 15px #000000; */
 }
-.character-card:hover {
-  transform: scale(1.1);
+.character-card:hover img {
+  /* transform: scale(1.07); */
+  transform: scale(1);
 }
-
-.character-card > h1 {
+.character-card:hover h4 {
+  transform: translateX(10%);
+}
+.character-card:hover .champ-name {
+  background-color:rgb(9, 119, 139);
+}
+.character-card h4 {
+  transition: all 0.4s;
+}
+.character-card > .champ-name {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: rgb(12, 32, 37);
   color: white;
   font-size: 1.5rem;
   font-family: "Beaufort for LOL", serif;
   padding: 5%;
+  transition: all 0.5s;
 }
 
 .character-card > img {
   display: block;
   max-width: 100%;
+  transform: scale(1.1);
+  transition: transform .2s;
+}
+.filter-container{
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.champClass{
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.champClass > * {
+  cursor: pointer;
+border: none;
+background-color: white;
+width: fit-content;
+border: 2px solid white;
+transition: border .2s;
+}
+
+.classActive {
+  border-bottom: 2px solid blue;
 }
 
 @media (max-width: 900px) {
@@ -68,4 +110,7 @@
   .characters-container {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+*{
+  /* border: 1px solid red; */
 }
