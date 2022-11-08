@@ -37,7 +37,7 @@
   text-decoration: none;
   color: white;
 }
-.github-icons :hover{
+.github-icons:hover{
   color: gold;
 }
 .footer-icons{
