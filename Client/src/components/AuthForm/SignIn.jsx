@@ -3,8 +3,9 @@ import { useRef } from "react";
 import "./SignIn.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import jwtDecode from "jwt-decode";
 
-function SignIn() {
+function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -28,7 +29,13 @@ function SignIn() {
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("token", res.token);
+        const user = jwtDecode(res.token);
+        console.log(props);
+        props.setUser(user);
         navigate("/userProfile");
+      })
+      .catch((error) => {
+        console.log("not authorized");
       });
   }
   return (
@@ -55,9 +62,9 @@ function SignIn() {
           />
           <button>Submit</button>
         </form>
-        <button className="create-account-btn">
-          <Link to="/signUp">Create account</Link>
-        </button>
+        <Link to="/signUp">
+          <button className="create-account-btn">Create account</button>
+        </Link>
       </div>
     </div>
   );

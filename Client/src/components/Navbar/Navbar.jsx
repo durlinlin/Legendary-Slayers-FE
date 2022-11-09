@@ -2,7 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ user, setUser }) {
+  function handleSignOut() {
+    localStorage.clear();
+    setUser(null);
+  }
   return (
     <nav className="nav-container">
       <Link to="/">
@@ -15,7 +19,13 @@ function Navbar() {
       <div className="nav-ul">
         <Link to="/champions">All Champions</Link>
         <Link to="/items">All Items</Link>
-        <Link to="/signin">Sign In</Link>
+        {user && (
+          <Link to="/" onClick={handleSignOut}>
+            Sign out
+          </Link>
+        )}
+
+        {!user && <Link to="/signin">Sign In</Link>}
       </div>
     </nav>
   );
