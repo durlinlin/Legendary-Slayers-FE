@@ -1,71 +1,68 @@
 @import url(//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold);
 
-#champSplash {
-	width: 75%;
-	height: 70%;
-	margin-top: 0px;
-	border-radius: 15px;
-	z-index: 1;
-	/* box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; */
-}
-
-.splashImg {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	top: 12%;
-	/* box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; */
-}
-
-.main {
-	/* margin-top: 30px; */
-	width: 100%;
-	position: relative;
-	/* box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset; */
+body {
+	background-color: black;
 }
 
 .backgroundImg {
-	width: 100%;
-	height: 100%;
-	display: block;
-	filter: blur(9px);
-	background-size: cover;
-	position: relative;
-	z-index: 0;
-	margin: -3px;
-	/* overflow: hidden; */
-	/* transform: scale(1.03); */
 	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+	display: block;
+	filter: blur(8px);
+	height: 100%;
+	margin: auto;
+	overflow: visible;
+	position: absolute;
+	width: 100%;
+	z-index: 0;
 }
 
 .content {
-	/* background-color: black;
-	opacity: 0.3; */
-	text-transform: uppercase;
-	letter-spacing: 0.03em;
-	width: 100%;
-	margin-top: 470px;
-	font-style: italic;
-	font-weight: 900;
-	/* margin-inline: auto; */
-	z-index: 2;
-	position: absolute;
-	top: 0;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+	color: white;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	font-style: italic;
+	font-weight: 900;
 	height: 40%;
-	text-align: center;
+	justify-content: center;
+	margin-top: 570px;
 	padding-left: 100px;
 	padding-right: 100px;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 }
-
-.title {
-	font-size: 25px;
+.main {
+	position: relative;
+	width: 100%;
 }
 
 .name {
 	font-size: 75px;
+	letter-spacing: 0.1em;
+}
+
+.splashImg {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 12%;
+	width: 100%;
+}
+
+.title {
+	font-size: 25px;
+	letter-spacing: 0.1em;
+}
+
+#champSplash {
+	border-radius: 15px;
+	height: 70%;
+	margin-top: 0px;
+	width: 75%;
+	z-index: 1;
 }

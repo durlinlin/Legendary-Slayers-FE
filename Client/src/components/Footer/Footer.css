@@ -1,82 +1,82 @@
-.footer-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 30px;
-  height: 400px;
-  width: 100vw;
-  background-color: black;
-  color: white;
-  z-index: 2;
+.footer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 30px;
+	height: 400px;
+	width: 100vw;
+	background-color: black;
+	color: white;
+	z-index: 2;
 }
-.github-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  list-style: none;
-  padding: 0px;
-  width: 400px;
+.github-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: row;
+	list-style: none;
+	padding: 0px;
+	width: 400px;
 }
-.github-links{
-  display: flex;
-  justify-content: space-between;
-  /* border: 1px solid yellow; */
+.github-links {
+	display: flex;
+	justify-content: space-between;
+	/* border: 1px solid yellow; */
 }
-.githubLogo{
-  display: flex;
-  height: 30px;
-  width: 30px;
+.githubLogo {
+	display: flex;
+	height: 30px;
+	width: 30px;
 }
-.github-icons{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  color: white;
+.github-icons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+	color: white;
 }
-.github-icons:hover{
-  color: rgb(9, 119, 139);
+.github-icons:hover {
+	color: rgb(9, 119, 139);
 }
-.footer-icons{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 300px;
-  padding-bottom: 0;
+.footer-icons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 300px;
+	padding-bottom: 0;
 }
-.footer-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('https://media.discordapp.net/attachments/573166469525798922/1038163144746467408/unknown.png?width=1562&height=983');
-  background-size: cover;
-  height: 100px;
-  width: 200px;
-  border-radius: 15px;
+.footer-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("https://media.discordapp.net/attachments/573166469525798922/1038163144746467408/unknown.png?width=1562&height=983");
+	background-size: cover;
+	height: 100px;
+	width: 200px;
+	border-radius: 15px;
 }
-.maturity-rating{
-  display: flex;
-  background-image: url('./maturity-rating.png');
-  align-items: center;
-  justify-content: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 40px;
-  height: 120px;
-  width: 280px;
+.maturity-rating {
+	display: flex;
+	background-image: url("./maturity-rating.png");
+	align-items: center;
+	justify-content: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-top: 40px;
+	height: 120px;
+	width: 280px;
 }
 
 .footer-container > h3 {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 @media screen and (max-width: 500px) {
-  .footer-container{
+	/* .footer-container{
     height: 47vh;
-  }
-  /* .maturity-rating{
+  } */
+	/* .maturity-rating{
     margin-bottom: 20px;
   } */
 }

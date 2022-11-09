@@ -13,7 +13,7 @@ function SignUp() {
   return (
     <div className="signIn-container">
       <form className="signIn-form" onSubmit={handleFormSubmit}>
-        <Link to="/signIn">Go Back</Link>
+        <Link to="/signIn" className="backButton">Go Back</Link>
         <h1>Sign Up</h1>
         <input
           type="text"
