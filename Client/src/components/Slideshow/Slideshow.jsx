@@ -10,7 +10,7 @@ import {
 } from "pure-react-carousel";
 
 function Slideshow() {
-	const [champion, setChampion] = useState({});
+	const [championSkins, setChampionSkins] = useState({});
 	const { champion_name } = useParams();
 
 	useEffect(() => {
@@ -18,22 +18,17 @@ function Slideshow() {
 			`https://legendary-slayers-be-production.up.railway.app/champions/name/${champion_name}`,
 		)
 			.then((res) => res.json())
-			.then((res) => setChampion(res[0]));
-	}, []);
-
-	useEffect(() => {
-		const getPosts = async () => setChampion(await database.get("recipes"));
-		getPosts();
+			.then((res) => setChampionSkins(res[0]));
 	}, []);
 
 	return (
-		<div id="topTenContainer">
+		<div id="championSlideshow">
 			<CarouselProvider
 				naturalSlideWidth={100}
 				naturalSlideHeight={125}
-				totalSlides={champion.length}>
+				totalSlides={championSkins.length}>
 				<Slider>
-					{champion.map((post) => (
+					{championSkins.map((post) => (
 						<Slide>{post.title}</Slide>
 					))}
 				</Slider>
