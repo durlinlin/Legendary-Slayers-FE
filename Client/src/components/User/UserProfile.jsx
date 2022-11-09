@@ -93,7 +93,7 @@ function UserProfile(props) {
             </div>
           </div>
           <div className="user-fav">
-            <div className="userFav favChamps">
+            <div className="fav-champs">
               <h3>Favorite Champions</h3>
               <div className="champIcons">
               {charsFav.map((data) => (
@@ -101,7 +101,7 @@ function UserProfile(props) {
               ))}
               </div>
             </div>
-            <div className="userFav favItems">
+            <div className="fav-items">
               <h3>Favorite Items</h3>
               <div className="champIcons">
               {itemsFav.map((data) => (
