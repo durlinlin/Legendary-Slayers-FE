@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold);
+
 .character-card,
 .character-page-wrapper * {
 	margin: 0;
@@ -10,6 +12,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: white;
+	padding-bottom: 30px;
 }
 
 .title-section {
@@ -64,10 +68,14 @@
 	width: 100%;
 	background-color: rgb(12, 32, 37);
 	color: white;
-	font-size: 1.5rem;
+	font-size: 20px;
 	font-family: "Beaufort for LOL", serif;
-	padding: 5%;
+	padding: 6%;
 	transition: all 0.5s;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: bolder;
 }
 
 .character-card > img {
