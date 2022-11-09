@@ -48,7 +48,7 @@
 }
 
 .item-card > img {
-  width: 48px;
+  width: 64px;
 }
 
 .pop-up {
@@ -75,6 +75,6 @@
     width: 340px;
   }
   .items-container {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
