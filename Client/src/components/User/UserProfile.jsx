@@ -111,19 +111,32 @@ function UserProfile(props) {
               ))}
             </div>
           </div>
-        </div>
-        <div className="user-fav">
-          <div className="userFav favChamps">
-            <h3>Favorite Champions</h3>
-            <div className="champIcons">
-              {charsFav.map((data) => (
-                <button
-                  className="eachIcon"
-                  style={{ backgroundImage: `url("${data.image_square}")` }}
-                >
-                  {data.name}
-                </button>
-              ))}
+          <div className="user-fav">
+            <div className="fav-champs">
+              <h3>Favorite Champions</h3>
+              <div className="champIcons">
+                {charsFav.map((data) => (
+                  <button
+                    className="eachIcon"
+                    style={{ backgroundImage: `url("${data.image_square}")` }}
+                  >
+                    {data.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="fav-items">
+              <h3>Favorite Items</h3>
+              <div className="champIcons">
+                {itemsFav.map((data) => (
+                  <button
+                    className="eachIcon"
+                    style={{ backgroundImage: `url("${data.full_image}")` }}
+                  >
+                    {data.name}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
           <div className="userFav favItems">

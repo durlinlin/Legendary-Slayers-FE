@@ -2,33 +2,32 @@
 
 body {
 	background-color: black;
+	overscroll-behavior: none;
 }
 
 .backgroundImg {
-	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-	display: block;
+	display: flex;
 	filter: blur(8px);
 	height: 100%;
-	margin: auto;
-	overflow: visible;
+	min-width: 1411px;
+	min-height: 700px;
+	justify-content: center;
 	position: absolute;
 	width: 100%;
 	z-index: 0;
 }
 
 .content {
-	align-items: center;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 	color: white;
 	display: flex;
 	flex-direction: column;
 	font-style: italic;
-	font-weight: 900;
-	height: 40%;
+	font-weight: bold;
 	justify-content: center;
-	margin-top: 570px;
-	padding-left: 100px;
-	padding-right: 100px;
+	margin-top: 690px;
+	padding-left: 195px;
+	padding-right: 195px;
 	position: absolute;
 	text-align: center;
 	text-transform: uppercase;
@@ -36,14 +35,51 @@ body {
 	width: 100%;
 	z-index: 2;
 }
+
+.champInfo {
+	display: flex;
+	background: rgba(0, 0, 0, 0.158);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.desc {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	width: 50%;
+	padding: 2.25rem;
+	box-align: center;
+}
+
+.infoDivider {
+	width: 1px;
+	margin: 2.5rem 0px;
+	background: rgba(255, 255, 255, 0.2);
+	transform-origin: center top;
+}
+
+.lore {
+	max-width: 100%;
+	margin-top: 0px;
+	color: rgb(255, 255, 255);
+	font-size: 0.875rem;
+	line-height: 1.28571;
+	letter-spacing: 0.08em;
+}
+
 .main {
 	position: relative;
 	width: 100%;
 }
 
+.name,
+.title {
+	letter-spacing: 0.1em;
+	display: block;
+}
+
 .name {
 	font-size: 75px;
-	letter-spacing: 0.1em;
 }
 
 .splashImg {
@@ -54,15 +90,28 @@ body {
 	width: 100%;
 }
 
+.roles {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 50%;
+	padding: 2.75rem;
+	text-align: center;
+}
+
+.tags {
+	font-size: 25px;
+}
+
 .title {
 	font-size: 25px;
-	letter-spacing: 0.1em;
 }
 
 #champSplash {
 	border-radius: 15px;
-	height: 70%;
+	height: 80%;
 	margin-top: 0px;
-	width: 75%;
+	width: 85%;
 	z-index: 1;
 }

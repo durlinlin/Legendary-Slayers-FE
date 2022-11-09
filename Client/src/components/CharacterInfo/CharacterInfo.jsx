@@ -15,13 +15,24 @@ function CharacterInfo() {
 			.then((res) => setChampion(res[0]));
 	}, []);
 
+	if (champion.tags == null) return;
+	// console.log(champion.tags);
+	// console.log(champion.tags.join(`, `));
 	return (
 		<div className={style.main}>
 			<div className={style.content}>
 				<span className={style.title}>{champion.title}</span>
 				<strong className={style.name}>{champion.name}</strong>
-				<div className={style.roles}></div>
-				<div className={style.description}></div>
+				<div className={style.champInfo}>
+					<div className={style.contentFrame}></div>
+					<div className={style.roles}>
+						<div className={style.tags}>{champion.tags.join(` | `)}</div>
+					</div>
+					<div className={style.infoDivider}></div>
+					<div className={style.desc}>
+						<p className={style.lore}>{champion.lore}</p>
+					</div>
+				</div>
 			</div>
 			<div className={style.backgroundSplash}>
 				<img
@@ -36,6 +47,13 @@ function CharacterInfo() {
 					id={style.champSplash}
 					alt=""
 				/>
+				<noscript>
+					<img
+						src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_name}_0.jpg`}
+						id={style.champSplash}
+						alt=""
+					/>
+				</noscript>
 			</div>
 			<div className={style.descWrapper}>
 				<div className={style.info}></div>
