@@ -73,9 +73,9 @@
   margin-top: 20px;
 }
 @media screen and (max-width: 500px) {
-  .footer-container{
+  /* .footer-container{
     height: 47vh;
-  }
+  } */
   /* .maturity-rating{
     margin-bottom: 20px;
   } */
