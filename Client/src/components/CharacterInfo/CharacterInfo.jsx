@@ -47,67 +47,30 @@ function CharacterInfo() {
 					id={style.champSplash}
 					alt=""
 				/>
-				<noscript>
-					<img
-						src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_name}_0.jpg`}
-						id={style.champSplash}
-						alt=""
-					/>
-				</noscript>
 			</div>
 			<div className={style.descWrapper}>
-				<div className={style.info}></div>
-				<div className={style.optionsList}>
-					<h2 className={style.abilitiesTitle}></h2>
-					<button className={style.abilities}>
-						<span className={style.ability1}>
-							<span className={style.abilityIcon1}></span>
-							<span className={style.abilityIcon1Border}></span>
-						</span>
-						<span className={style.optionLine}></span>
-						<span className={style.optionBullet}>
-							::before
-							<span className={style.selectBullet}></span>
-							::after
-						</span>
-					</button>
-					<button className={style.abilities}>
-						<span className={style.ability2}>
-							<span className={style.abilityIcon2}></span>
-							<span className={style.abilityIcon2Border}></span>
-						</span>
-						<span className={style.optionLine}></span>
-						<span className={style.optionBullet}>
-							::before
-							<span className={style.selectBullet}></span>
-							::after
-						</span>
-					</button>
-					<button className={style.abilities}>
-						<span className={style.ability3}>
-							<span className={style.abilityIcon3}></span>
-							<span className={style.abilityIcon3Border}></span>
-						</span>
-						<span className={style.optionLine}></span>
-						<span className={style.optionBullet}>
-							::before
-							<span className={style.selectBullet}></span>
-							::after
-						</span>
-					</button>
-					<button className={style.abilities}>
-						<span className={style.ability4}>
-							<span className={style.abilityIcon4}></span>
-							<span className={style.abilityIcon4Border}></span>
-						</span>
-						<span className={style.optionLine}></span>
-						<span className={style.optionBullet}>
-							::before
-							<span className={style.selectBullet}></span>
-							::after
-						</span>
-					</button>
-				</div>
+				<section className={style.abilities}>
+					<div className={style.abilitiesWrapper}>
+						<div className={style.abilitiesContent}>
+							<div className={style.abilitiesInner}>
+								<div className={style.abilitiesSelector}></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<button className={style.abilities}>
+					<span className={style.ability4}>
+						<span className={style.abilityIcon4}></span>
+						<span className={style.abilityIcon4Border}></span>
+					</span>
+					<span className={style.optionLine}></span>
+					<span className={style.optionBullet}>
+						::before
+						<span className={style.selectBullet}></span>
+						::after
+					</span>
+				</button>
 			</div>
 		</div>
 	);
