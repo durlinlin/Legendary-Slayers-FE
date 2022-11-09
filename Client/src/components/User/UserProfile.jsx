@@ -56,12 +56,19 @@ function UserProfile() {
             </div>
             </div>
           </div>
-        
-          <div className="user-teams">
+          <div className="user-fav">
+            <div className="userFav favChamps">
+              <h3>Favorite Champions</h3>
+            </div>
+            <div className="userFav favItems">
+              <h3>Favorite Items</h3>
+            </div>
+          </div>
+          {/* <div className="user-teams">
             <div className="userTeam TeamOne"><h3>Team 1</h3></div>
             <div className="userTeam TeamTwo"><h3>Team 2</h3></div>
             <div className="userTeam TeamThree"><h3>Team 1</h3></div>
-          </div>
+          </div> */}
         
       </div>
     </div>
