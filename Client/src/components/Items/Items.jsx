@@ -55,7 +55,7 @@ function Items() {
               <div className="pop-up hide">
                 <p>{item.name}</p>
                 <p>{item.plaintext}</p>
-                <p>Buy Price: {item.buy_price}</p>
+                <p>Base Price: {item.base_price}</p>
                 <p>Sell Price: {item.sell_price}</p>
               </div>
             </>
