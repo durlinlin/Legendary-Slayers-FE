@@ -17,9 +17,10 @@ function Characters() {
   }; 
   const handleClassSearch = (e) => {
     e.preventDefault();
-    setClassID(e.target.id)
+    // console.log(e.target.id)
     setChampClass(e.target.dataset.value.toString())
   }; 
+
   const handleSelectChange = (e) => {
     e.preventDefault()
     console.log(e.target.value)

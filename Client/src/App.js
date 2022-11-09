@@ -8,6 +8,7 @@ import CharacterInfo from "./components/CharacterInfo/CharacterInfo";
 import Items from "./components/Items/Items";
 import SignIn from "./components/AuthForm/SignIn";
 import SignUp from "./components/AuthForm/SignUp";
+import UserProfile from "./components/User/UserProfile";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/userProfile" element={<UserProfile />} />
         <Route path="/champions" element={<Characters />} />
         <Route path="/champions/:champion_name" element={<CharacterInfo />} />
         <Route path="/items" element={<Items />} />
