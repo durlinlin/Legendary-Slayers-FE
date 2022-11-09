@@ -41,13 +41,17 @@
 }
 
 .signIn-form > button {
-  margin-top: 10px;
+  margin: 10px 0;
   padding: 10px;
   border: none;
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
   background-color: rgb(237, 167, 62);
 }
-
+button > *{
+  text-decoration: none;
+  color: black;
+}
 .signIn-form > button:hover {
   cursor: pointer;
   background-color: rgb(224, 146, 29);

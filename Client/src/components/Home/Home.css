@@ -33,6 +33,7 @@
   background-image: url('./leaguelogo.png');
   background-size: cover;
   background-position: center;
+  display: none;
 }
 #home-bg-A{
   background-size: cover;
@@ -50,14 +51,18 @@
   align-items: center;
 }
 #frontVid{
-position: absolute;
-top: 0px;
-left: 0px;
-right: 0px;
-bottom: 0px;
-display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  position: absolute;
+  /* top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; */
+  object-position: center;
+  object-fit: cover;
+  /* min-width: 100%;
+  min-height: 100%; */
 }
 
 
@@ -88,11 +93,11 @@ background-color: white;
   align-items: center;
 }
 
-
 .homeFrontVid{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* object-fit: contain; */
   overflow: hidden;
   position: absolute;
   height: 100%;
@@ -110,5 +115,8 @@ background-color: white;
   .homeBackVid{
     height: 100%;
     width: fit-content;
+  }
+  .homeBackLogo {
+    display: flex;
   }
 }

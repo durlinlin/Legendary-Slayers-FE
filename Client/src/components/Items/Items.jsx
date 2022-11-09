@@ -1,9 +1,23 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
-import itemsJson from "../../Items.json";
+// import itemsJson from "../../Items.json";
+import Footer from "../Footer/Footer";
 import "./Items.css";
+
 function Items() {
+  const [itemsData, setItemsData] = useState([])
+  let fetchItemsData = () => {
+    fetch("https://legendary-slayers-be-production.up.railway.app/items/all")
+      .then((res) => res.json())
+      .then((data) => {
+        setItemsData(data)
+      })
+  }
+  useEffect(() => {
+    fetchItemsData()
+  },[])
+
   function showInfo(e) {
     e.currentTarget.nextElementSibling.style.top = `${e.clientY - 100}px`;
     e.currentTarget.nextElementSibling.style.left = `${e.clientX + 30}px`;
@@ -15,9 +29,17 @@ function Items() {
     e.currentTarget.nextElementSibling.classList.add("hide");
   };
   return (
-    <div className="wrapper">
+  <div>
+    <div className="items-page-wrapper">
+      <div className="items-title-section">
+        <h4>CHOOSE YOUR</h4>
+        <h1>ITEMS</h1>
+        <p>
+        All in-game items for League of Legends, including mythics, legendary, starting items, and consumables. Up-to-date stats, passives, actives, and gold costs
+        </p>
+      </div>
       <div className="items-container">
-        {itemsJson.map((item, index) => {
+        {itemsData.map((item, index) => {
           return (
             <>
               <div
@@ -40,7 +62,9 @@ function Items() {
           );
         })}
       </div>
-    </div>
+      </div>
+      <Footer />
+  </div>
   );
 }
 

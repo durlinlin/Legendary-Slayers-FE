@@ -32,8 +32,8 @@
   color: #ff2f2f;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nav-ul {
-    width: 70%;
+    width: 75%;
   }
 }
