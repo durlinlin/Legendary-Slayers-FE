@@ -17,7 +17,7 @@ function Characters() {
   }; 
   const handleClassSearch = (e) => {
     e.preventDefault();
-    // console.log(e.target.id)
+    setClassID(e.target.id)
     setChampClass(e.target.dataset.value.toString())
   }; 
 
@@ -26,6 +26,7 @@ function Characters() {
     console.log(e.target.value)
     setChampClass(e.target.value)
   }
+
   let fetchData = () => {
     fetch("https://legendary-slayers-be-production.up.railway.app/champions/all")
       .then((res) => res.json())
@@ -35,7 +36,22 @@ function Characters() {
   }
   useEffect(() => {
     fetchData()
-  },[])
+    handleClick()
+  }, [])
+
+  const handleClick = () => {
+    let currentClass = document.getElementById(`${classID}`)
+    let buttons = document.querySelectorAll("button")
+    buttons.forEach((button) => {
+      button.classList.remove('classActive')
+    })
+    if (currentClass) {
+      currentClass.classList.add("classActive")
+    }
+  }
+  useEffect(() => {
+    handleClick();
+    }, [classID])
 
   return (
     <div>
