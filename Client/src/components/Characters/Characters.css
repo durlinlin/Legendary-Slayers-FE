@@ -115,6 +115,9 @@
 	border: 2px solid white;
 	transition: border 0.2s;
 }
+.champClassFilter > *:hover{
+  border-bottom: 2px solid blue;
+}
 .champClassSelect {
 	display: none;
 }
@@ -142,4 +145,7 @@
 	.champClassSelect {
 		display: flex;
 	}
+  .character-card > .champ-name {
+    font-size: 12px;
+  }
 }
