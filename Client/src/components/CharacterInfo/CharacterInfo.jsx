@@ -17,6 +17,12 @@ function CharacterInfo() {
 
 	return (
 		<div className={style.main}>
+			<div className={style.content}>
+				<span className={style.title}>{champion.title}</span>
+				<strong className={style.name}>{champion.name}</strong>
+				<div className={style.roles}></div>
+				<div className={style.description}></div>
+			</div>
 			<div className={style.backgroundSplash}>
 				<img
 					src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_name}_0.jpg`}
@@ -25,10 +31,6 @@ function CharacterInfo() {
 				/>
 			</div>
 			<div className={style.splashImg}>
-				<div className={style.content}>
-					<span className={style.title}>{champion.title}</span>
-					<strong className={style.name}>{champion.name}</strong>
-				</div>
 				<img
 					src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion_name}_0.jpg`}
 					id={style.champSplash}
@@ -36,10 +38,7 @@ function CharacterInfo() {
 				/>
 			</div>
 			<div className={style.descWrapper}>
-				<div className={style.info}>
-					<div className={style.roles}></div>
-					<div className={style.description}></div>
-				</div>
+				<div className={style.info}></div>
 				<div className={style.optionsList}>
 					<h2 className={style.abilitiesTitle}></h2>
 					<button className={style.abilities}>
