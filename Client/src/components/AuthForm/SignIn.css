@@ -19,11 +19,16 @@
   width: 80%;
   max-width: 400px;
 }
-.signIn-form * {
+
+.signIn {
+  display: flex;
+  flex-direction: column;
+}
+.signIn * {
   border-radius: 5px;
 }
 
-.signIn-form > input {
+.signIn > input {
   border: none;
   padding: 15px 10px;
   margin-bottom: 20px;
@@ -32,15 +37,15 @@
   outline: 0;
 }
 
-.signIn-form > input:hover {
+.signIn > input:hover {
   background-color: rgb(232, 232, 232);
 }
 
-.signIn-form > input:focus {
+.signIn > input:focus {
   background-color: rgb(232, 232, 232);
 }
 
-.signIn-form > button {
+.signIn > button {
   margin: 10px 0;
   padding: 10px;
   border: none;
@@ -48,11 +53,26 @@
   text-decoration: none;
   background-color: rgb(237, 167, 62);
 }
-button > *{
+button > * {
   text-decoration: none;
   color: black;
 }
-.signIn-form > button:hover {
+.signIn > button:hover {
+  cursor: pointer;
+  background-color: rgb(224, 146, 29);
+}
+
+.create-account-btn {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  background-color: rgb(237, 167, 62);
+  border-radius: 5px;
+}
+
+.create-account-btn:hover {
   cursor: pointer;
   background-color: rgb(224, 146, 29);
 }

@@ -33,30 +33,32 @@ function SignIn() {
   }
   return (
     <div className="signIn-container">
-      <form className="signIn-form" onSubmit={handleFormSubmit}>
-        <h1>Sign In</h1>
-        <input
-          type="text"
-          value={username}
-          placeholder="Username"
-          name="username"
-          id="username"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          value={password}
-          type="password"
-          placeholder="Password"
-          name="password"
-          id="password"
-          autoComplete="on"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button>Log In</button>
-        <button>
+      <div className="signIn-form">
+        <form className="signIn" onSubmit={handleFormSubmit}>
+          <h1>Sign In</h1>
+          <input
+            type="text"
+            value={username}
+            placeholder="Username"
+            name="username"
+            id="username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            value={password}
+            type="password"
+            placeholder="Password"
+            name="password"
+            id="password"
+            autoComplete="on"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button>Submit</button>
+        </form>
+        <button className="create-account-btn">
           <Link to="/signUp">Create account</Link>
         </button>
-      </form>
+      </div>
     </div>
   );
 }
