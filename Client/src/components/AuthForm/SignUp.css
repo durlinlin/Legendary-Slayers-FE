@@ -1,10 +1,60 @@
 .signUp-container {
-  margin-top: 100px;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://lolstatic-a.akamaihd.net/rso-login-page/3.2.32/assets/lol_desktop_background_2x.jpg");
+  background-size: cover;
 }
-.backButton {
-  cursor: pointer;
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: fit-content;
+  transform: translateY(-20px);
+  padding: 40px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+}
+.signUp * {
+  border-radius: 5px;
+}
+
+.signUp > input {
+  border: none;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  background-color: rgb(241, 241, 241);
+  transition: all 0.3s ease-in-out;
+  outline: 0;
+}
+
+.signUp > input:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+.signUp > input:focus {
+  background-color: rgb(232, 232, 232);
+}
+
+.signUp > button {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
-  text-align: center;
-  width: 30%; 
-  border: 1px solid black;
+  background-color: rgb(237, 167, 62);
+}
+button > * {
+  text-decoration: none;
+  color: black;
+}
+.signUp-form > button:hover {
+  cursor: pointer;
+  background-color: rgb(224, 146, 29);
 }
