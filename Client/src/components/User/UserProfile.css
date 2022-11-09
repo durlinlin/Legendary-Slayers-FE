@@ -93,6 +93,28 @@
   background-color: rgb(9, 119, 139);
   color: white;
 }
+.user-fav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45vw;
+  border: 1px solid black;
+  height: 62vh;
+  gap: 3%;
+  background-color: rgb(12, 32, 37);
+}
+.userFav {
+  display: flex;
+  /* align-items: flex-start; */
+  width: 90%;
+  height: 45%;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: rgb(9, 119, 139);
+  color: white;
+}
 .champIcons {
   display: flex;
   flex-direction: row;
