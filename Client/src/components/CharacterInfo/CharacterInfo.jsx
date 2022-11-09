@@ -48,32 +48,11 @@ function CharacterInfo() {
 					alt=""
 				/>
 			</div>
+
 			<div className={style.descWrapper}>
-				<section className={style.abilities}>
-					<div className={style.abilitiesWrapper}>
-						<div className={style.abilitiesContent}>
-							<div className={style.abilitiesInner}>
-								<div className={style.abilitiesSelector}>
-									<div className={style.abilitiesWrapperInner}>
-										<div className={style.abilitiesOptions}>
-											<h2 className={style.abilityTitle}>Abilities</h2>
-											<div className={style.abilityInfo}>
-												<ol className={style.abilityInfoList}>
-													<li className={style.abilityInfoItems}>
-														<h6 className={style.abilityType}></h6>
-														<h5 className={style.abilityName}></h5>
-														<p className={style.abilityDescription}></p>
-													</li>
-												</ol>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className={style.videoSelector}>
-									<div className={style.videoContainer}></div>
-								</div>
-							</div>
-						</div>
+				<section className={style.abilitiesWrapper}>
+					<div className={style.abilityIcons}>
+						<button className={style.linkToVideo}></button>
 					</div>
 				</section>
 
