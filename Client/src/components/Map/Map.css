@@ -52,10 +52,22 @@
 .button-one {
   background-color: rgb(208 169 92);
   margin-right: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+.button-one:hover{
+  cursor: pointer;
 }
 
 .button-two {
   background-color: rgb(89 199 228);
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+.button-two:hover{
+  cursor: pointer;
 }
 
 .buttons-tag {
