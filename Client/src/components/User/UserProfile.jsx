@@ -30,7 +30,6 @@ function UserProfile(props) {
     fetch("https://legendary-slayers-be-production.up.railway.app/users/name/victor")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data[0].userName, data[0].favCharacters)
         setUserName(data[0].userName)
         setCharsFav(data[0].favCharacters)
         setItemsFav(data[0].favItems)
@@ -41,24 +40,51 @@ function UserProfile(props) {
     fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/${event.target.id}`,
     {
       method: "PUT"
-    })
+      })
+      .then(fetchUserData)
   }
 
   let addCharFav = (event) => {
     fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/${event.target.id}`,
     {
       method: "PUT"
-    })
+      })
+      .then(fetchUserData)
+  }
+  let deleteItemFav = (event) => {
+    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/delete/${event.target.id}`,
+    {
+      method: "PUT"
+      })
+      .then(fetchUserData)
+  }
+
+  let deleteCharFav = (event) => {
+    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/delete/${event.target.id}`,
+    {
+      method: "PUT"
+      })
+      .then(fetchUserData)
+  }
+
+  let deleteUser= (event) => {
+    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/random`,
+    {
+      method: "DELETE"
+      })
+    console.log('clicked')
   }
 
   useEffect(() => {
     fetchData()
     fetchItemsData()
-  }, [])
-
-  useEffect(() => {
     fetchUserData()
   }, [])
+// let location = useLocation()
+  // useEffect(() => {
+  //   fetchUserData()
+  //   console.log("Yo")
+  // }, [])
   
   return (
     <div className="user-wrapper">
@@ -78,16 +104,16 @@ function UserProfile(props) {
             <div className="fav-champs">
               <h3>Champions</h3>
               <div className="champIcons">
-              {charsIcon.map((data) => (
-                <button id={data._id} onClick={addCharFav}className="eachIcon"style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
+              {charsIcon.map((data, index) => (
+                <button id={data._id} onClick={addCharFav} key={index} className="eachIcon" style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
               ))}
               </div>
             </div>
             <div className="fav-items">
               <h3>Items</h3>
               <div className="champIcons">
-              {itemsData.map((data) => (
-                <button id={data._id} onClick={addItemFav}className="eachIcon"style={{ backgroundImage: `url("${data.full_image}")` }}>{data.name}</button>
+              {itemsData.map((data, index) => (
+                <button id={data._id} onClick={addItemFav} key={index} className="eachIcon"style={{ backgroundImage: `url("${data.full_image}")` }}>{data.name}</button>
               ))}
               </div>
             </div>
@@ -96,16 +122,16 @@ function UserProfile(props) {
             <div className="fav-champs">
               <h3>Favorite Champions</h3>
               <div className="champIcons">
-              {charsFav.map((data) => (
-                <button className="eachIcon"style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
+              {charsFav.map((data, index) => (
+                <button id={data._id} onClick={deleteCharFav} key={index} className="eachIcon"style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
               ))}
               </div>
             </div>
             <div className="fav-items">
               <h3>Favorite Items</h3>
               <div className="champIcons">
-              {itemsFav.map((data) => (
-                <button className="eachIcon"style={{ backgroundImage: `url("${data.full_image}")` }}>{data.name}</button>
+              {itemsFav.map((data, index) => (
+                <button id={data._id} onClick={deleteItemFav} key={index} className="eachIcon"style={{ backgroundImage: `url("${data.full_image}")` }}>{data.name}</button>
               ))}
               </div>
             </div>
@@ -117,6 +143,7 @@ function UserProfile(props) {
           </div> */}
         
       </div>
+      <button onClick={deleteUser} className="deleteUser">Remove User</button>
     </div>
   );
 }
