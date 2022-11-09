@@ -58,11 +58,10 @@ function UserProfile() {
             </div>
           </div>
           <div className="user-fav">
-            <div className="userFav favChamps">
+            <div className="fav-champs">
               <h3>Favorite Champions</h3>
             </div>
-            <div className="userFav favItems">
-              <h3>Favorite Items</h3>
+            <div className="fav-items">
             </div>
           </div>
           {/* <div className="user-teams">
