@@ -5,6 +5,7 @@ import "./UserProfile.css";
 function UserProfile() {
   const [charsIcon, setCharsIcon] = useState([])
   const [itemsData, setItemsData] = useState([])
+  localStorage.getItem("token")
   let fetchItemsData = () => {
     fetch("https://legendary-slayers-be-production.up.railway.app/items/all")
       .then((res) => res.json())
