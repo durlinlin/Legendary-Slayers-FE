@@ -44,7 +44,7 @@ function UserProfile() {
               <h3>Champions</h3>
               <div className="champIcons">
               {charsIcon.map((data) => (
-                <div className="eachIcon"style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</div>
+                <button className="eachIcon"style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
               ))}
             </div>
             </div>

@@ -12,7 +12,7 @@ function Map() {
           <p className="first-line">START YOUR</p>
           <p className="second-line">LEGEND</p>
           <p className="third-line">
-            new to League? Get a rundown on the basics for the most popular game
+            New to League? Get a rundown on the basics for the most popular game
             mode.
           </p>
           <div className="buttons-tag">
