@@ -142,4 +142,7 @@
 	.champClassSelect {
 		display: flex;
 	}
+  .character-card > .champ-name {
+    font-size: 12px;
+  }
 }
