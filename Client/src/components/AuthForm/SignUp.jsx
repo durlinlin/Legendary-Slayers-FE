@@ -31,6 +31,7 @@ function SignUp() {
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("token", res.token);
+        navigate("/signIn");
       });
   }
   return (
