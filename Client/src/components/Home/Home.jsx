@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
 import Footer from "../Footer/Footer";
+import Map from "../Map/Map"
+
 
 function Home() {
   return (
@@ -36,6 +38,7 @@ function Home() {
         </div>
         <div className="homeSectionABottom"></div>
       </div>
+      <Map />
       <Footer/>
     </div>
   );
