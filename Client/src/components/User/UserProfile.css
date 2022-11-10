@@ -150,5 +150,8 @@
   padding: 10px;
   color: red;
 }
-
-
+@media (max-width: 500px){
+  .fav-champs > h3, .fav-items > h3 {
+    font-size: 15px;
+  }
+}
