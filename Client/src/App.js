@@ -40,7 +40,12 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/signIn" element={<SignIn setUser={setUser} />} />
         <Route path="/signUp" element={<SignUp setUser={setUser} />} />
-        <Route path="/userProfile" element={<UserProfile user={user} />} />
+        {user && (
+          <Route
+            path="/userProfile"
+            element={<UserProfile user={user} setUser={setUser} />}
+          />
+        )}
         <Route path="/champions" element={<Characters />} />
         <Route path="/champions/:champion_name" element={<CharacterInfo />} />
         <Route path="/items" element={<Items />} />
