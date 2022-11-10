@@ -3,10 +3,12 @@ import { useRef } from "react";
 import "./SignIn.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import jwtDecode from "jwt-decode";
 
-function SignIn() {
+function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [invalidCreds, setInvalidCreds] = useState(false);
   const navigate = useNavigate();
 
   function handleFormSubmit(e) {
@@ -28,7 +30,14 @@ function SignIn() {
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("token", res.token);
+        const user = jwtDecode(res.token);
+        console.log(props);
+        props.setUser(user);
         navigate("/userProfile");
+      })
+      .catch((error) => {
+        setInvalidCreds(true);
+        console.log("not authorized");
       });
   }
   return (
@@ -36,6 +45,11 @@ function SignIn() {
       <div className="signIn-form">
         <form className="signIn" onSubmit={handleFormSubmit}>
           <h1>Sign In</h1>
+          {invalidCreds && (
+            <p className="signIn-invalid">
+              Invalid credentials. Please try again.
+            </p>
+          )}
           <input
             type="text"
             value={username}
@@ -55,9 +69,9 @@ function SignIn() {
           />
           <button>Submit</button>
         </form>
-        <button className="create-account-btn">
-          <Link to="/signUp">Create account</Link>
-        </button>
+        <Link to="/signUp">
+          <button className="create-account-btn">Create account</button>
+        </Link>
       </div>
     </div>
   );

@@ -3,8 +3,10 @@ import "./SignUp.css";
 import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import jwtDecode from "jwt-decode";
+
 //npm i jwt-decode
-function SignUp() {
+function SignUp(props) {
   const passwordRef = useRef(null);
   const usernameRef = useRef(null);
   const navigate = useNavigate();
@@ -31,7 +33,9 @@ function SignUp() {
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("token", res.token);
-        navigate("/signIn");
+        const user = jwtDecode(res.token);
+        props.setUser(user);
+        navigate("/userProfile");
       });
   }
   return (

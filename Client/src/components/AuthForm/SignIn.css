@@ -70,9 +70,14 @@ button > * {
   text-decoration: none;
   background-color: rgb(237, 167, 62);
   border-radius: 5px;
+  width: 100%;
 }
 
 .create-account-btn:hover {
   cursor: pointer;
   background-color: rgb(224, 146, 29);
+}
+
+.signIn-invalid {
+  color: red;
 }
