@@ -70,7 +70,9 @@
 width: 100vw;
 height: 50vh;
 overflow: hidden;
-background-color: white;
+background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 95%, #000000 100%);
+/* background-color: white; */
+/* z-index: 2; */
 }
 .homeFrontVidWrap{
   display: flex;
@@ -119,4 +121,9 @@ background-color: white;
   .homeBackLogo {
     display: flex;
   }
+  .homeSectionABottom{
+    height: 40vh;
+    overflow: hidden;
+    background-color: white;
+    }
 }
