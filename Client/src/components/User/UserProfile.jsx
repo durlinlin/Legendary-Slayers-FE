@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 import "./UserProfile.css";
+import { signOut } from "../../services/Users.js"
 
 function UserProfile(props) {
   const [charsIcon, setCharsIcon] = useState([]);
@@ -30,7 +32,7 @@ function UserProfile(props) {
 
   let fetchUserData = () => {
     fetch(
-      "https://legendary-slayers-be-production.up.railway.app/users/name/victor"
+      `https://legendary-slayers-be-production.up.railway.app/users/name/${props.user.userName}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -42,7 +44,7 @@ function UserProfile(props) {
 
   let addItemFav = (event) => {
     fetch(
-      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/${event.target.id}`,
+      `https://legendary-slayers-be-production.up.railway.app/users/name/${props.user.userName}/items/${event.target.id}`,
       {
         method: "PUT",
       }
@@ -51,7 +53,7 @@ function UserProfile(props) {
 
   let addCharFav = (event) => {
     fetch(
-      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/${event.target.id}`,
+      `https://legendary-slayers-be-production.up.railway.app/users/name/${props.user.userName}/champions/${event.target.id}`,
       {
         method: "PUT",
       }
@@ -59,7 +61,7 @@ function UserProfile(props) {
   };
   let deleteItemFav = (event) => {
     fetch(
-      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/delete/${event.target.id}`,
+      `https://legendary-slayers-be-production.up.railway.app/users/name/${props.user.userName}/items/delete/${event.target.id}`,
       {
         method: "PUT",
       }
@@ -68,7 +70,7 @@ function UserProfile(props) {
 
   let deleteCharFav = (event) => {
     fetch(
-      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/delete/${event.target.id}`,
+      `https://legendary-slayers-be-production.up.railway.app/users/name/${props.user.userName}/champions/delete/${event.target.id}`,
       {
         method: "PUT",
       }
@@ -77,12 +79,13 @@ function UserProfile(props) {
 
   let deleteUser = (event) => {
     fetch(
-      `https://legendary-slayers-be-production.up.railway.app/users/name/random`,
+      `https://legendary-slayers-be-production.up.railway.app/users/name/${props.user.userName}`,
       {
         method: "DELETE",
       }
-    );
-    console.log("clicked");
+    )
+    localStorage.clear()
+    props.user = null
   };
 
   useEffect(() => {
@@ -90,11 +93,6 @@ function UserProfile(props) {
     fetchItemsData();
     fetchUserData();
   }, []);
-  // let location = useLocation()
-  // useEffect(() => {
-  //   fetchUserData()
-  //   console.log("Yo")
-  // }, [])
 
   return (
     <div className="user-wrapper">
@@ -106,7 +104,7 @@ function UserProfile(props) {
         </p>
       </div>
       <div className="user-navbar">
-        <h2>{userName}</h2>
+        <h2>Welcome {userName}!</h2>
       </div>
 
       <div className="user-container">
@@ -184,9 +182,9 @@ function UserProfile(props) {
             <div className="userTeam TeamThree"><h3>Team 1</h3></div>
           </div> */}
       </div>
-      <button onClick={deleteUser} className="deleteUser">
-        Remove User
-      </button>
+      <Link to="/signin" onClick={deleteUser} className="deleteUser">
+       Delete My Account 
+      </Link>
     </div>
   );
 }
