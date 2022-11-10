@@ -84,6 +84,8 @@ function UserProfile(props) {
         method: "DELETE",
       }
     )
+    localStorage.clear()
+    props.user = null
   };
 
   useEffect(() => {
@@ -180,7 +182,7 @@ function UserProfile(props) {
             <div className="userTeam TeamThree"><h3>Team 1</h3></div>
           </div> */}
       </div>
-      <Link to="/" onClick={deleteUser} className="deleteUser">
+      <Link to="/signin" onClick={deleteUser} className="deleteUser">
        Delete My Account 
       </Link>
     </div>
