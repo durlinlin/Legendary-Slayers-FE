@@ -20,11 +20,7 @@ function Navbar({ user, setUser }) {
         <Link to="/champions">All Champions</Link>
         <Link to="/items">All Items</Link>
 
-        {user && (
-          <Link to="/userProfile" onClick={handleSignOut}>
-            Profile
-          </Link>
-        )}
+        {user && <Link to="/userProfile">Profile</Link>}
         {user && (
           <Link to="/" onClick={handleSignOut}>
             Sign out
