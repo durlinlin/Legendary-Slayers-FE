@@ -76,3 +76,7 @@ button > * {
   cursor: pointer;
   background-color: rgb(224, 146, 29);
 }
+
+.signIn-invalid {
+  color: red;
+}

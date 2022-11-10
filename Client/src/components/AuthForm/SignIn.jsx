@@ -8,6 +8,7 @@ import jwtDecode from "jwt-decode";
 function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [invalidCreds, setInvalidCreds] = useState(false);
   const navigate = useNavigate();
 
   function handleFormSubmit(e) {
@@ -35,6 +36,7 @@ function SignIn(props) {
         navigate("/userProfile");
       })
       .catch((error) => {
+        setInvalidCreds(true);
         console.log("not authorized");
       });
   }
@@ -43,6 +45,11 @@ function SignIn(props) {
       <div className="signIn-form">
         <form className="signIn" onSubmit={handleFormSubmit}>
           <h1>Sign In</h1>
+          {invalidCreds && (
+            <p className="signIn-invalid">
+              Invalid credentials. Please try again.
+            </p>
+          )}
           <input
             type="text"
             value={username}
