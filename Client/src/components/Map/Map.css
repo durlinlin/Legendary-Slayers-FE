@@ -1,24 +1,36 @@
 
 .map-wraper {
   display: flex;
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
 }
 
 .game-map {
+  position: relative;
   width: 65%;
+  /* height: 100%; */
+  /* border: 1px solid red; */
   background-color: black;
-  background-size: cover;
+  background-size:auto;
+  background-position: center;
 }
 
 
 .all-info {
  height: 100vh;
- background-color: black;
+ width: 50%;
+ /* border: 1px solid red; */
  display: flex;
  flex-direction: column;
  justify-content: center;
+ align-items: center;
  text-align: center;
  margin: 0;
  padding: 0;
+ position:absolute;
+ right: 0;
 }
 
 .first-line {
@@ -73,4 +85,24 @@
 .buttons-tag {
   display: flex;
   padding: 0 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .map-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 70vh;
+  }
+  .all-info{
+    position:relative;
+    background-color: none;
+    width: 100%;
+    transform: scale(.7);
+  }
+  .game-map{
+    width: 100%;
+    z-index: -1;
+  }
 }
