@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./UserProfile.css";
-import { signOut } from "../../services/Users.js"
+import { signOut } from "../../services/Users.js";
 
 function UserProfile(props) {
   const [charsIcon, setCharsIcon] = useState([]);
@@ -10,7 +10,6 @@ function UserProfile(props) {
   const [userName, setUserName] = useState([]);
   const [charsFav, setCharsFav] = useState([]);
   const [itemsFav, setItemsFav] = useState([]);
-  localStorage.getItem("token");
 
   let fetchItemsData = () => {
     fetch("https://legendary-slayers-be-production.up.railway.app/items/all")
@@ -83,11 +82,10 @@ function UserProfile(props) {
       {
         method: "DELETE",
       }
-    )
-    localStorage.clear()
-    props.user = null
+    );
+    localStorage.clear();
+    props.setUser(null);
   };
-
   useEffect(() => {
     fetchData();
     fetchItemsData();
@@ -183,7 +181,7 @@ function UserProfile(props) {
           </div> */}
       </div>
       <Link to="/signin" onClick={deleteUser} className="deleteUser">
-       Delete My Account 
+        Delete My Account
       </Link>
     </div>
   );
