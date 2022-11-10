@@ -3,89 +3,99 @@ import { useState, useEffect } from "react";
 import "./UserProfile.css";
 
 function UserProfile(props) {
-  const [charsIcon, setCharsIcon] = useState([])
-  const [itemsData, setItemsData] = useState([])
-  const [userName, setUserName] = useState([])
-  const [charsFav, setCharsFav] = useState([])
-  const [itemsFav, setItemsFav] = useState([])
-  localStorage.getItem("token")
-  
+  const [charsIcon, setCharsIcon] = useState([]);
+  const [itemsData, setItemsData] = useState([]);
+  const [userName, setUserName] = useState([]);
+  const [charsFav, setCharsFav] = useState([]);
+  const [itemsFav, setItemsFav] = useState([]);
+  localStorage.getItem("token");
+
   let fetchItemsData = () => {
     fetch("https://legendary-slayers-be-production.up.railway.app/items/all")
       .then((res) => res.json())
       .then((data) => {
-        setItemsData(data)
-      })
-  }
+        setItemsData(data);
+      });
+  };
 
   let fetchData = () => {
-    fetch("https://legendary-slayers-be-production.up.railway.app/champions/all")
+    fetch(
+      "https://legendary-slayers-be-production.up.railway.app/champions/all"
+    )
       .then((res) => res.json())
       .then((data) => {
-        setCharsIcon(data)
-      })
-  }
-  
+        setCharsIcon(data);
+      });
+  };
+
   let fetchUserData = () => {
-    fetch("https://legendary-slayers-be-production.up.railway.app/users/name/victor")
+    fetch(
+      "https://legendary-slayers-be-production.up.railway.app/users/name/victor"
+    )
       .then((res) => res.json())
       .then((data) => {
-        setUserName(data[0].userName)
-        setCharsFav(data[0].favCharacters)
-        setItemsFav(data[0].favItems)
-      })
-  }
+        setUserName(data[0].userName);
+        setCharsFav(data[0].favCharacters);
+        setItemsFav(data[0].favItems);
+      });
+  };
 
   let addItemFav = (event) => {
-    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/${event.target.id}`,
-    {
-      method: "PUT"
-      })
-      .then(fetchUserData)
-  }
+    fetch(
+      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/${event.target.id}`,
+      {
+        method: "PUT",
+      }
+    ).then(fetchUserData);
+  };
 
   let addCharFav = (event) => {
-    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/${event.target.id}`,
-    {
-      method: "PUT"
-      })
-      .then(fetchUserData)
-  }
+    fetch(
+      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/${event.target.id}`,
+      {
+        method: "PUT",
+      }
+    ).then(fetchUserData);
+  };
   let deleteItemFav = (event) => {
-    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/delete/${event.target.id}`,
-    {
-      method: "PUT"
-      })
-      .then(fetchUserData)
-  }
+    fetch(
+      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/items/delete/${event.target.id}`,
+      {
+        method: "PUT",
+      }
+    ).then(fetchUserData);
+  };
 
   let deleteCharFav = (event) => {
-    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/delete/${event.target.id}`,
-    {
-      method: "PUT"
-      })
-      .then(fetchUserData)
-  }
+    fetch(
+      `https://legendary-slayers-be-production.up.railway.app/users/name/victor/champions/delete/${event.target.id}`,
+      {
+        method: "PUT",
+      }
+    ).then(fetchUserData);
+  };
 
-  let deleteUser= (event) => {
-    fetch(`https://legendary-slayers-be-production.up.railway.app/users/name/random`,
-    {
-      method: "DELETE"
-      })
-    console.log('clicked')
-  }
+  let deleteUser = (event) => {
+    fetch(
+      `https://legendary-slayers-be-production.up.railway.app/users/name/random`,
+      {
+        method: "DELETE",
+      }
+    );
+    console.log("clicked");
+  };
 
   useEffect(() => {
-    fetchData()
-    fetchItemsData()
-    fetchUserData()
-  }, [])
-// let location = useLocation()
+    fetchData();
+    fetchItemsData();
+    fetchUserData();
+  }, []);
+  // let location = useLocation()
   // useEffect(() => {
   //   fetchUserData()
   //   console.log("Yo")
   // }, [])
-  
+
   return (
     <div className="user-wrapper">
       <div className="user-title-section">
@@ -100,50 +110,83 @@ function UserProfile(props) {
       </div>
 
       <div className="user-container">
-          <div className="fav-container">
-            <div className="fav-champs">
-              <h3>Champions</h3>
-              <div className="champIcons">
+        <div className="fav-container">
+          <div className="fav-champs">
+            <h3>Champions</h3>
+            <div className="champIcons">
               {charsIcon.map((data, index) => (
-                <button id={data._id} onClick={addCharFav} key={index} className="eachIcon" style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
+                <button
+                  id={data._id}
+                  onClick={addCharFav}
+                  key={index}
+                  className="eachIcon"
+                  style={{ backgroundImage: `url("${data.image_square}")` }}
+                >
+                  {data.name}
+                </button>
               ))}
-              </div>
             </div>
-            <div className="fav-items">
-              <h3>Items</h3>
-              <div className="champIcons">
+          </div>
+          <div className="fav-items">
+            <h3>Items</h3>
+            <div className="champIcons">
               {itemsData.map((data, index) => (
-                <button id={data._id} onClick={addItemFav} key={index} className="eachIcon"style={{ backgroundImage: `url("${data.full_image}")` }}>{data.name}</button>
+                <button
+                  id={data._id}
+                  onClick={addItemFav}
+                  key={index}
+                  className="eachIcon"
+                  style={{ backgroundImage: `url("${data.full_image}")` }}
+                >
+                  {data.name}
+                </button>
               ))}
-              </div>
             </div>
           </div>
-          <div className="user-fav">
-            <div className="fav-champs">
-              <h3>Favorite Champions</h3>
-              <div className="champIcons">
+        </div>
+        <div className="user-fav">
+          <div className="fav-champs">
+            <h3>Favorite Champions</h3>
+            <div className="champIcons">
               {charsFav.map((data, index) => (
-                <button id={data._id} onClick={deleteCharFav} key={index} className="eachIcon"style={{ backgroundImage: `url("${data.image_square}")` }}>{data.name}</button>
+                <button
+                  id={data._id}
+                  onClick={deleteCharFav}
+                  key={index}
+                  className="eachIcon"
+                  style={{ backgroundImage: `url("${data.image_square}")` }}
+                >
+                  {data.name}
+                </button>
               ))}
-              </div>
-            </div>
-            <div className="fav-items">
-              <h3>Favorite Items</h3>
-              <div className="champIcons">
-              {itemsFav.map((data, index) => (
-                <button id={data._id} onClick={deleteItemFav} key={index} className="eachIcon"style={{ backgroundImage: `url("${data.full_image}")` }}>{data.name}</button>
-              ))}
-              </div>
             </div>
           </div>
-          {/* <div className="user-teams">
+          <div className="fav-items">
+            <h3>Favorite Items</h3>
+            <div className="champIcons">
+              {itemsFav.map((data, index) => (
+                <button
+                  id={data._id}
+                  onClick={deleteItemFav}
+                  key={index}
+                  className="eachIcon"
+                  style={{ backgroundImage: `url("${data.full_image}")` }}
+                >
+                  {data.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* <div className="user-teams">
             <div className="userTeam TeamOne"><h3>Team 1</h3></div>
             <div className="userTeam TeamTwo"><h3>Team 2</h3></div>
             <div className="userTeam TeamThree"><h3>Team 1</h3></div>
           </div> */}
-        
       </div>
-      <button onClick={deleteUser} className="deleteUser">Remove User</button>
+      <button onClick={deleteUser} className="deleteUser">
+        Remove User
+      </button>
     </div>
   );
 }
