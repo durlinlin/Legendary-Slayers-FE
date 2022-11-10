@@ -19,12 +19,17 @@ function Navbar({ user, setUser }) {
       <div className="nav-ul">
         <Link to="/champions">All Champions</Link>
         <Link to="/items">All Items</Link>
+
+        {user && (
+          <Link to="/userProfile" onClick={handleSignOut}>
+            Profile
+          </Link>
+        )}
         {user && (
           <Link to="/" onClick={handleSignOut}>
             Sign out
           </Link>
         )}
-
         {!user && <Link to="/signin">Sign In</Link>}
       </div>
     </nav>
