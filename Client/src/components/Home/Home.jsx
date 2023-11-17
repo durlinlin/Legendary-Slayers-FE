@@ -15,7 +15,7 @@ function Home() {
             autoPlay
             loop
             muted
-            src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
+            src="https://www.leagueoflegends.com/static/hero-c35bd03ceaa5f919e98b20c905044a3d.webm"
             type="video/mp4"
           ></video>
         </div>
